@@ -1,4 +1,4 @@
-package com.matrix;
+package com.matrix.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
