@@ -66,7 +66,7 @@ public class UserDao extends AbstractBaseRedisDao<String, User> implements
 				RedisSerializer<String> serializer = getRedisSerializer();
 				byte[] key = serializer.serialize(user.getId());
 				byte[] name = serializer.serialize(user.getName());
-				connection.setNX(key, name);
+				connection.set(key, name);
 				return true;
 			}
 		});

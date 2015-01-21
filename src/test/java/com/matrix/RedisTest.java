@@ -42,7 +42,7 @@ public class RedisTest extends AbstractJUnit4SpringContextTests{
 		}
 		System.out.println(System.currentTimeMillis() - begin);
 	}
-
+	@Ignore
 	@Test
 	public void testAddUsers(){
 		List<User> list = new ArrayList<User>();
@@ -81,13 +81,12 @@ public class RedisTest extends AbstractJUnit4SpringContextTests{
 		}
 		userDao.delete(list);
 	}
-	@Ignore
 	@Test
 	public void testGetUser(){
 		String id = "user1";
 		User user = userDao.get(id);
 		Assert.assertNotNull(user);
-		Assert.assertEquals(user.getName(),"java2000_w1");
+		Assert.assertEquals(user.getName(),"liuyue");
 	}
 	
 	public void setUserDao(IUserDao userDao){
